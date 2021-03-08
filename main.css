@@ -37,11 +37,13 @@ h1 {
   color: white;
   background-color: #003627;
   align-self: flex-start;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 26pt;
   color: #003627;
+  font-weight: 400;
 }
 
 .navbar {
