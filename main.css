@@ -3,59 +3,99 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
   background-image: url(background.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #719dc0;
-  font-family: lato, sans-serif;
+  font-family: EB Garamond, serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
 }
 
-.header {
+main {
+  box-sizing: border-box;
+  position: absolute;
+  top: 2em;
+  left: calc(50% - 24em);
+  width: 48em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 4em);
+  padding: 2em 4em;
+}
+
+main:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;  
+  background: white;
+  z-index: -1;
+}
+
+header {
   font-size: 36pt;
   display: flex;
   flex-direction: column;
-  margin: 0.75em;
+  align-items: center;
 }
 
 h1 {
   font-size: 36pt;
   width: auto;
   margin: 0;
-  padding: 0.1em 0.3em;
   text-transform: uppercase;
-  color: white;
-  background-color: #003627;
+  color: #003627;
   align-self: flex-start;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h2 {
   font-size: 26pt;
   color: #003627;
   font-weight: 400;
+  padding: 0.2em 0.5em;
+  border: 2px solid #003627;
+  border-radius: 1em;
 }
 
-.navbar {
-  align-self: flex-start;
+nav ul {
+  list-style: none;
   font-size: 36pt;
-  margin: 1em 0.75em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
+  margin: 0;
+  padding: 0;
+  padding-left: 0.5em;
+  justify-content: center;
 }
 
-.navbar a {
+nav ul li {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav ul li + li:before {
+  display: block;
+  content: ' ';
+  width: 0.5em;
+  height: 2px;
+  background: #003627;
+}
+
+nav a {
   font-size: 28pt;
   display: flex;
   justify-content: center;
@@ -63,8 +103,9 @@ h2 {
   box-sizing: border-box;
   width: 2em;
   height: 2em;
-  margin-right: 0.7em;
   text-decoration: none;
-  background-color: #003627;
-  color: white;
+  color: #003627;
+  border: 2px solid #003627;
+  border-radius: 1em;
 }
+
