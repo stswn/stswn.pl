@@ -13,32 +13,37 @@ body {
   font-family: EB Garamond, serif;
   font-style: normal;
   font-weight: 300;
-}
+  min-height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;}
 
 main {
+  position: relative;
   box-sizing: border-box;
-  position: absolute;
-  top: 2em;
-  left: calc(50% - 24em);
   width: 48em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100% - 4em);
   padding: 2em 4em;
+  height: 30em;
+  margin: 2em;
 }
 
 main:before {
-  content: ' ';
+  content: '';
   display: block;
   position: absolute;
   left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
   opacity: 0.6;  
   background: white;
   z-index: -1;
+  border-radius: 0.5em;
 }
 
 header {
@@ -61,9 +66,30 @@ h2 {
   font-size: 26pt;
   color: #003627;
   font-weight: 400;
+  margin: 0.5em;
   padding: 0.2em 0.5em;
   border: 2px solid #003627;
   border-radius: 1em;
+}
+
+.sigil {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+}
+
+.sigil img {
+  height: 90%;
+  max-width: 75%;
+  object-fit: contain;
+}
+
+nav {
+  font-size: 26pt;
 }
 
 nav ul {
@@ -73,8 +99,8 @@ nav ul {
   flex-direction: row;
   flex-wrap: wrap-reverse;
   margin: 0;
+  margin-top: 0.5em;
   padding: 0;
-  padding-left: 0.5em;
   justify-content: center;
 }
 
@@ -106,5 +132,10 @@ nav a {
   color: #003627;
   border: 2px solid #003627;
   border-radius: 1em;
+}
+
+nav a:hover {
+  color: #3a5a2d;
+  border: 2px solid #3a5a2d;
 }
 
